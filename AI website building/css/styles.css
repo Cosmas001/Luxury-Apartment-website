@@ -199,7 +199,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 .hero-content { position: relative; padding-bottom: clamp(2.5rem, 6vh, 4.5rem); }
 .hero-title { max-width: 14ch; }
-.hero-title em { font-style: italic; color: var(--gold-light); }
+.hero-title em { font-style: italic; color: #e79224; }
 .hero-lede { max-width: 34rem; margin: 1.6rem 0 2.4rem; color: rgba(245,241,234,.82); font-size: clamp(1rem, 1.3vw, 1.1rem); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; }
 
