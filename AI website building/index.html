@@ -205,32 +205,48 @@
             <p class="eyebrow">Gallery</p>
             <h2 class="section-title" id="gallery-title">A closer <em>look.</em></h2>
           </div>
-          <p class="gallery-note">Select any image to view it full screen.</p>
+          <p class="gallery-note">Drag the line or use the arrows. Select the centre print to view it full screen.</p>
         </div>
+      </div>
 
-        <div class="gallery-grid">
-          <button class="g-item g-wide reveal" data-full="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=2000&q=80&auto=format&fit=crop">
+      <!-- Polaroid line carousel: prints pegged to a sagging string (driven by js/main.js).
+           data-title = handwritten label + caption heading, img alt = caption. -->
+      <div class="pl-root" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Penthouse 58 gallery">
+        <svg class="pl-string" aria-hidden="true"><path fill="none" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <div class="pl-track">
+          <button type="button" class="g-item pl-card" data-title="The Grand Salon" data-full="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=2000&q=80&auto=format&fit=crop">
             <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&q=70&auto=format&fit=crop" width="1200" height="800" loading="lazy" decoding="async" alt="The grand salon, with double-height glazing">
           </button>
-          <button class="g-item g-tall reveal" style="--d:.08s" data-full="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=2000&q=80&auto=format&fit=crop">
+          <button type="button" class="g-item pl-card" data-title="Principal Suite" data-full="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=2000&q=80&auto=format&fit=crop">
             <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=800&q=70&auto=format&fit=crop" width="800" height="1000" loading="lazy" decoding="async" alt="The principal bedroom suite at dusk">
           </button>
-          <button class="g-item reveal" data-full="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=2000&q=80&auto=format&fit=crop">
+          <button type="button" class="g-item pl-card" data-title="The Chef's Kitchen" data-full="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=2000&q=80&auto=format&fit=crop">
             <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=70&auto=format&fit=crop" width="800" height="600" loading="lazy" decoding="async" alt="The chef's kitchen, in Calacatta marble">
           </button>
-          <button class="g-item reveal" style="--d:.08s" data-full="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=2000&q=80&auto=format&fit=crop">
+          <button type="button" class="g-item pl-card" data-title="Formal Dining" data-full="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=2000&q=80&auto=format&fit=crop">
             <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&q=70&auto=format&fit=crop" width="800" height="600" loading="lazy" decoding="async" alt="The formal dining room">
           </button>
-          <button class="g-item g-tall reveal" data-full="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=2000&q=80&auto=format&fit=crop">
+          <button type="button" class="g-item pl-card" data-title="Library Lounge" data-full="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=2000&q=80&auto=format&fit=crop">
             <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&q=70&auto=format&fit=crop" width="800" height="1000" loading="lazy" decoding="async" alt="The library lounge, in oak and bronze">
           </button>
-          <button class="g-item g-wide reveal" style="--d:.08s" data-full="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=2000&q=80&auto=format&fit=crop">
+          <button type="button" class="g-item pl-card" data-title="Terrace &amp; Pool" data-full="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=2000&q=80&auto=format&fit=crop">
             <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=70&auto=format&fit=crop" width="1200" height="800" loading="lazy" decoding="async" alt="The terrace and plunge pool at twilight">
           </button>
-          <button class="g-item reveal" data-full="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=2000&q=80&auto=format&fit=crop">
+          <button type="button" class="g-item pl-card" data-title="Arrival Court" data-full="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=2000&q=80&auto=format&fit=crop">
             <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=70&auto=format&fit=crop" width="800" height="600" loading="lazy" decoding="async" alt="The residents' arrival court at The Aurelian">
           </button>
         </div>
+        <div class="pl-bar">
+          <div class="pl-cap" aria-hidden="true"><span class="pl-title"></span><span class="pl-sub"></span></div>
+          <span class="pl-count" aria-hidden="true"></span>
+          <button type="button" class="pl-btn pl-prev" aria-label="Previous image">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 3 5 8l5 5" stroke="currentColor" stroke-width="1.4"/></svg>
+          </button>
+          <button type="button" class="pl-btn pl-next" aria-label="Next image">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m6 3 5 5-5 5" stroke="currentColor" stroke-width="1.4"/></svg>
+          </button>
+        </div>
+        <div class="pl-sr" aria-live="polite"></div>
       </div>
 
       <!-- Lightbox (native <dialog>: handles focus trapping and Escape for us) -->
